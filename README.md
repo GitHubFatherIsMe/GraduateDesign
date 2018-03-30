@@ -1,1 +1,1 @@
-algorithms written by Golang.
+answer of leetcode written by Goalng.
