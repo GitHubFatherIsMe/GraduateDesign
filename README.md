@@ -1,1 +1,1 @@
-answer of leetcode written by Goalng.
+graduate design written by 唐马龙.
