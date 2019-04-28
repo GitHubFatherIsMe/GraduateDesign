@@ -1,0 +1,19 @@
+{{define "content"}}
+<script src="/static/js/three.js"></script>
+
+<script src="/static/js/controls/TrackballControls.js"></script>
+<script src="/static/js/loaders/PDBLoader.js"></script>
+<script src="/static/js/renderers/CSS2DRenderer.js"></script>
+
+{{if .}}
+<p>{{.Uuid}}</p>
+<textarea name="fasta" wrap="off" cols="70" rows="5" style="font-size :13px;">{{.Seq}}</textarea><br>
+<TEXTarea name="pssm" wrap="off" rows="20" cols="150" style="font-size :10px;">{{.Pssm}}</TEXTarea>
+<div id="container"></div>
+<script src="/static/js/3D_model.js"></script>
+<script>init({{.Result}})</script>
+<script>animate()</script>
+{{else}}
+<p>啊哦,您所查找的UUID不存在</p>
+{{end}}
+{{end}}

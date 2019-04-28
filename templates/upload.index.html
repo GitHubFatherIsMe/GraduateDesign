@@ -1,0 +1,14 @@
+{{ define "content" }}
+<!-- use residue sequences as input -->
+<form action="http://localhost:8000/process" method="POST" enctype="multipart/form-data">
+    邮箱:<input type="email" name="mail"><br>
+    <input type="file" name="residue_seq">
+    <input type="submit" value="上传">
+    </form>
+
+<!-- submit text data must set action="path/?name",else host won't work -->
+<form action="http://localhost:8000/result?uuid" method="POST" enctype="application/x-www-form-urlencoded">
+    <input type="text" name="uuid" value="ID">
+    <input type="submit" value="提交">
+</form>
+{{ end }}
